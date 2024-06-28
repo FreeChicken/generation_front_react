@@ -1,6 +1,6 @@
 
 import homeLogo from '../../assets/blog.svg'
-/*import './Home.css';*/
+import './Home.css';
 
 
 function Home() {
