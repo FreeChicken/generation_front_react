@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
 
 function Navbar() {
-  let navigate = useNavigate()
+  const  navigate = useNavigate()
 
   const { usuario, handleLogout } = useContext(AuthContext)
 
@@ -23,7 +23,7 @@ function Navbar() {
           <div className="flex gap-4">
             <Link to='/home' className="hover:underline cursor-pointer">Postagens</Link>
             <Link to='/temas' className="hover:underline cursor-pointer">Temas</Link>
-            <Link to='/formularioTema' className="hover:underline cursor-pointer">Cadastrar tema</Link>
+            <Link to='/cadastrarTema' className="hover:underline cursor-pointer">Cadastrar tema</Link>
             <div className="hover:underline cursor-pointer">Perfil</div>
             <Link to='/' onClick={logout} className="hover:underline cursor-pointer">Sair</Link>
           </div>

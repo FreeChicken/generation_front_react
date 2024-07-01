@@ -16,7 +16,7 @@ function ListaTemas() {
 
   async function buscarTemas() {
     try {
-      await buscar('/temas', setTemas, {
+      await buscar('/temas/all', setTemas, {
         headers: { Authorization: token },
       });
     } catch (error: any) {
