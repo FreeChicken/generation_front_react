@@ -125,8 +125,8 @@ function FormularioPostagem() {
         retornar();
       } catch (error: any) {
         if (error.toString().includes('403')) {
-          toastAlerta('O token expirou, favor logar novamente', 'info')
-          handleLogout()
+          toastAlerta('O token expirou, favor logar novamente', 'info');
+          handleLogout();
         } else {
           toastAlerta('Erro ao cadastrar a Postagem', 'erro');
         }

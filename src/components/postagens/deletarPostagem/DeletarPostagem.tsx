@@ -44,7 +44,7 @@ function DeletarPostagem() {
   }, [id])
 
   function retornar() {
-    navigate("/postagens")
+    navigate("/home")
   }
 
   async function deletarPostagem() {
@@ -55,13 +55,14 @@ function DeletarPostagem() {
         }
       })
 
-      toastAlerta('Postagem apagada com sucesso', 'sucesso')
+      toastAlerta('Postagem apagada com sucesso', 'sucesso');
+      
 
     } catch (error) {
       toastAlerta('Erro ao apagar a Postagem', 'erro')
     }
 
-    retornar()
+    retornar();
   }
   return (
     <div className='container w-1/3 mx-auto'>
