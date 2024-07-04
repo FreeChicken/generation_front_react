@@ -1,12 +1,20 @@
 
 import {GithubLogo, LinkedinLogo } from '@phosphor-icons/react'
+import { useContext } from 'react'
+import { AuthContext } from '../../contexts/AuthContext'
 
 function Footer() {
  
+  const { usuario, handleLogout } = useContext(AuthContext)
+
+  let footerComponent
+
+  let data = new Date().getFullYear()
   
 
-  return (
-    <>
+  if(usuario.token !== '') {
+    footerComponent = (
+      <>
         <div className="flex justify-center bg-black text-white">
           <div className="container flex flex-col items-center py-4">
             <p className='text-xl font-bold'>Blog pessoal Generation | Copyright: Anderson Alves - 2024 </p>
@@ -19,6 +27,13 @@ function Footer() {
         </div>
       </>
   )
+}
+
+return (
+  <>
+    {footerComponent}
+  </>
+)
 }
 
 export default Footer

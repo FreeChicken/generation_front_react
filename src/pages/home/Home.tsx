@@ -1,5 +1,6 @@
-
-import homeLogo from '../../assets/blog.svg'
+import homeLogo from '../../assets/blog_branco.svg'
+import ListaPostagens from '../../components/postagens/listaPostagens/ListaPostagens';
+import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 
 
 function Home() {
@@ -8,12 +9,12 @@ function Home() {
         <div className="bg-black flex justify-center py-6">
           <div className='container grid grid-cols-2 text-white'>
             <div className="flex flex-col gap-4 items-center justify-center py-4">
-              <h2 className='text-5xl font-bold'>Welcome!</h2>
-              <p className='text-xl'>Expresse aqui seus pensamentos e opiniões</p>
+              <h2 className='text-5xl font-bold'>Welcome to...</h2>
   
               <div className="flex justify-around gap-4">
+              <ModalPostagem />
               
-                <button className='rounded bg-white text-blue-800 py-2 px-4'>Ver postagens</button>
+            
               </div>
             </div>
   
@@ -23,6 +24,7 @@ function Home() {
             </div>
           </div>
         </div>
+        <ListaPostagens />
       
       </>
     );
